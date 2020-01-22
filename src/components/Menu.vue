@@ -6,7 +6,7 @@
         <ItemsList />
       </div>
       <div class="w-1/2 bg-gray-500">
-        <ItemImage />
+        <ItemImage></ItemImage>
       </div>
     </div>
   </div>
