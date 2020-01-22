@@ -1,19 +1,21 @@
 <template>
   <div>
-    <table class="border-separate">
-      <tbody
-        v-for="item in menuItems"
-        :key="item.name"
+    <div v-for="item in menuItems" :key="item.name">
+      <ul
+        class="flex justify-between bg-gray-200"
         :class="item.highlight ? 'highlight' : ''"
       >
-        <tr>
-          <td class="px-4 py-2 text-left">{{ item.name }}</td>
-          <td class="px-4 py-2">{{ item.price }}</td>
-        </tr>
-      </tbody>
-    </table>
+        <p class="px-4 py-2 m-2">
+          {{ item.name }}
+        </p>
+        <p class="px-4 py-2 m-2">
+          {{ item.price }}
+        </p>
+      </ul>
+    </div>
   </div>
 </template>
+
 <script>
 export default {
   data() {
@@ -66,6 +68,6 @@ export default {
 
 <style scoped>
 .highlight {
-  background-color: grey;
+  background-color: gray;
 }
 </style>
