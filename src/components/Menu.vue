@@ -1,17 +1,16 @@
 <template>
   <div>
-    <table
-      class="table-auto"
-      v-for="item in menuItems"
-      :key="item.name"
-      :class="item.highlight ? 'highlight' : ''"
-    >
-      <tr>
-        <td class="border px-4 py-2 text-justify">
-          {{ item.name }} {{ item.price }}
-        </td>
-        <td class="border px-4 py-2 text-right">{{ item.price }}</td>
-      </tr>
+    <table class="border-separate">
+      <tbody
+        v-for="item in menuItems"
+        :key="item.name"
+        :class="item.highlight ? 'highlight' : ''"
+      >
+        <tr>
+          <td class="px-4 py-2 text-left">{{ item.name }}</td>
+          <td class="px-4 py-2">{{ item.price }}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>
@@ -68,6 +67,5 @@ export default {
 <style scoped>
 .highlight {
   background-color: grey;
-  font-weight: 900;
 }
 </style>
