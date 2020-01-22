@@ -1,5 +1,7 @@
 <template>
-  <div><p>Hello from ItemImage component</p></div>
+  <div>
+    <img v-bind:src="image_url" />
+  </div>
 </template>
 
 <script>

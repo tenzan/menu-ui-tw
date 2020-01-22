@@ -3,10 +3,10 @@
     <!-- Two columns -->
     <div class="flex mb-4">
       <div class="w-1/2 bg-gray-400">
-        <ItemsList />
+        <ItemsList @imageChanged="imageChanged" />
       </div>
       <div class="w-1/2 bg-gray-500">
-        <ItemImage></ItemImage>
+        <ItemImage :image_url="image"></ItemImage>
       </div>
     </div>
   </div>
@@ -20,6 +20,16 @@ export default {
   components: {
     ItemsList,
     ItemImage
+  },
+  data() {
+    return {
+      image: ""
+    };
+  },
+  methods: {
+    imageChanged(image) {
+      this.image = image;
+    }
   }
 };
 </script>

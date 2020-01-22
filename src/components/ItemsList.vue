@@ -1,16 +1,9 @@
 <template>
   <div>
     <div v-for="item in menuItems" :key="item.name">
-      <ul
-        class="flex justify-between bg-gray-200"
-        :class="item.highlight ? 'highlight' : ''"
-      >
-        <p class="px-4 py-2 m-2">
-          {{ item.name }}
-        </p>
-        <p class="px-4 py-2 m-2">
-          {{ item.price }}
-        </p>
+      <ul class="flex justify-between bg-gray-200" :class="item.highlight ? 'highlight' : ''">
+        <p class="px-4 py-2 m-2">{{ item.name }}</p>
+        <p class="px-4 py-2 m-2">{{ item.price }}</p>
       </ul>
     </div>
   </div>
@@ -55,6 +48,7 @@ export default {
         init = 0;
       }
       self.menuItems[init].highlight = true;
+      self.$emit("imageChanged", self.menuItems[init].image_url);
       if (init === 0) {
         self.menuItems[self.menuItems.length - 1].highlight = false;
       } else {
