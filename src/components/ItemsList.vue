@@ -17,22 +17,22 @@ export default {
         {
           name: "Apple",
           price: 20,
-          image_url: "../assets/images/apple.jpg"
+          image_url: "../images/apple.jpg"
         },
         {
           name: "Orange",
           price: 21,
-          image_url: "../assets/images/orange.jpg"
+          image_url: "../images/orange.jpg"
         },
         {
           name: "Banana",
           price: 22,
-          image_url: "../assets/images/banana.jpg"
+          image_url: "../images/banana.jpg"
         },
         {
           name: "Grape",
           price: 23,
-          image_url: "../assets/images/grape.jpg"
+          image_url: "../images/grape.jpg"
         }
       ]
     };
